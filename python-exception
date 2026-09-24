@@ -1,0 +1,69 @@
+1. Handle Division by Zero
+try:
+    a = 10
+    b = 0
+    result = a / b
+    print("Result:", result)
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+Output:
+Error: Cannot divide by zero.
+
+2. Handle Invalid Input
+try:
+    num = int(input("Enter a number: "))
+    print("You entered:", num)
+
+except ValueError:
+    print("Error: Please enter a valid number.")
+
+Output:
+Enter a number: abc
+Error: Please enter a valid number.
+
+3. Handle Index Error
+try:
+    numbers = [10, 20, 30]
+    print(numbers[5])
+
+except IndexError:
+    print("Error: List index is out of range.")
+
+Output:
+Error: List index is out of range.
+
+4. Handle Key Error
+try:
+    student = {
+        "name": "Rahul",
+        "age": 20
+    }
+
+    print(student["course"])
+
+except KeyError:
+    print("Error: The requested key does not exist.")
+
+Output:
+Error: The requested key does not exist.
+
+5. Using try, except, else, and finally
+try:
+    num = 10
+    result = 100 / num
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+else:
+    print("Result:", result)
+
+finally:
+    print("Program execution completed.")
+
+Output:
+Result: 10.0
+Program execution completed
+
